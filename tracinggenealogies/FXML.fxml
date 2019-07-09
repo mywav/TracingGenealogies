@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="639.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tracinggenealogies.FXMLController">
+   <children>
+      <TextArea fx:id="textArea" editable="false" layoutX="462.0" layoutY="165.0" prefHeight="431.0" prefWidth="266.0" />
+      <Button fx:id="openFile" layoutX="228.0" layoutY="492.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="104.0" prefWidth="214.0" text="Open Genealogy File">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="218.0" layoutY="14.0" prefHeight="72.0" prefWidth="554.0" text="Tracing Genealogies" textFill="#169463" wrapText="true">
+         <font>
+            <Font name="Tahoma" size="57.0" />
+         </font>
+         <effect>
+            <Glow level="0.79" />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="50.0" prefHeight="36.0" prefWidth="142.0" text="Instructions:" underline="true" wrapText="true">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="14.0" layoutY="95.0" prefHeight="501.0" prefWidth="200.0" text="Open a file using the &quot;Open Genealogy File&quot; button. The file must be in the following format: it must be a .txt file with 3 columns. The first row will only contain a number that represents the total amount of people you want evaluated. Beginning with the second row, the first column will contain the first names of all the individuals for which you would like to evaluate. The second column will have a number that indicates how many children the person in the first column has. The third column will contain the first names of the children of that person. All the names must be unique. After opening an existing file, which will appear to the right, fill out the 2 boxes to the right that ask if a certain person is a descendant of another person. Click the &quot;Trace Genealogy&quot; button to see the results. An example of the file that needs to be submitted is to the right." wrapText="true" />
+      <Label layoutX="228.0" layoutY="93.0" prefHeight="34.0" prefWidth="252.0" text="Example genealogy file:" underline="true" wrapText="true">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="textArea2" editable="false" layoutX="228.0" layoutY="142.0" prefHeight="337.0" prefWidth="214.0" text="10          &#10;Al            3       Beth Carol Dino&#10;Beth        1       Pablo&#10;Carol       3       Ben Alex Mary&#10;Dino        0       &#10;Pablo      2       Angela Miguel&#10;Ben          0&#10;Alex         0&#10;Mary        0&#10;Angela     0&#10;Miguel     0" wrapText="true" />
+      <Label layoutX="462.0" layoutY="128.0" prefHeight="27.0" prefWidth="161.0" text="Genealogy File:" underline="true" wrapText="true">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="analyzeGenealogy" layoutX="739.0" layoutY="310.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="72.0" prefWidth="148.0" text="Analyze Genealogy">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="textField2" layoutX="739.0" layoutY="266.0" />
+      <Label layoutX="739.0" layoutY="165.0" prefHeight="39.0" prefWidth="149.0" text="Is this person:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textField1" layoutX="739.0" layoutY="205.0" />
+      <Label layoutX="901.0" layoutY="209.0" prefHeight="17.0" prefWidth="87.0" text="insert a name" textFill="#00000073" />
+      <Label layoutX="901.0" layoutY="270.0" prefHeight="17.0" prefWidth="110.0" text="insert another name" textFill="#0000007b" />
+      <Label layoutX="740.0" layoutY="236.0" text="a descendant of:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="textArea3" layoutX="740.0" layoutY="433.0" prefHeight="159.0" prefWidth="275.0" />
+      <Label layoutX="740.0" layoutY="398.0" prefHeight="17.0" prefWidth="149.0" text="Results:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>
